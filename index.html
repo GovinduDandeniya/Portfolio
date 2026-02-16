@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Govindu | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>G<span class="logo-dot">.</span>Dev<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Let's Talk</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <canvas id="particleCanvas"></canvas>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content hero-split">
+            <div class="hero-text">
+                <div class="hero-badge" data-animate="fade-up">
+                    <span class="badge-dot"></span>
+                    Available for work
+                </div>
+                <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-name">Govindu</span>
+                    <span class="title-line">I craft <span class="text-gradient">digital experiences</span></span>
+                </h1>
+                <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
+                    Computer Science undergraduate & full-stack developer building beautiful, 
+                    functional, and user-centered digital experiences.
+                </p>
+                <div class="hero-actions" data-animate="fade-up" data-delay="300">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-photo" data-animate="fade-up" data-delay="200">
+                <div class="hero-photo-wrapper">
+                    <!-- Replace the <img> src below with your photo -->
+                    <img src="" alt="Govindu" class="hero-profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="hero-photo-fallback">
+                        <i class="fas fa-user"></i>
+                        <span>Your Photo</span>
+                    </div>
+                </div>
+                <div class="hero-photo-border"></div>
+                <div class="hero-photo-dots"></div>
+                <div class="hero-photo-glow"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator" data-animate="fade-up" data-delay="500">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Turning ideas into <span class="text-gradient">reality</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content about-content-full" data-animate="fade-up">
+                    <h3 class="about-heading">A passionate developer based in Sri Lanka</h3>
+                    <p class="about-text">
+                        I'm a Computer Science undergraduate with a passion for building elegant 
+                        solutions to complex problems. With a strong foundation in both front-end 
+                        and back-end technologies, I bring ideas to life through clean code and thoughtful design.
+                    </p>
+                    <p class="about-text">
+                        Currently pursuing my BSc in Computer Science at IIT, I combine academic 
+                        knowledge with practical experience to deliver exceptional digital products. 
+                        My approach focuses on creating seamless user experiences that leave lasting impressions.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Sri Lanka</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BSc CS @ IIT</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Freelancer</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>govindudandeniya@gmail.com</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary" download>
+                        <span>Download CV</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">My Skills</span>
+                <h2 class="section-title">Technologies I <span class="text-gradient">work with</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-animate="fade-up" data-delay="0">
+                    <div class="skill-icon" style="--accent: #61DAFB">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h4>React</h4>
+                    <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                </div>
+                <div class="skill-card" data-animate="fade-up" data-delay="50">
+                    <div class="skill-icon" style="--accent: #3178C6">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h4>JavaScript</h4>
+                    <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                </div>
+                <div class="skill-card" data-animate="fade-up" data-delay="100">
+                    <div class="skill-icon" style="--accent: #38BDF8">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h4>CSS / Tailwind</h4>
+                    <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
+                </div>
+                <div class="skill-card" data-animate="fade-up" data-delay="150">
+                    <div class="skill-icon" style="--accent: #68A063">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <h4>Node.js</h4>
+                    <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+                </div>
+                <div class="skill-card" data-animate="fade-up" data-delay="200">
+                    <div class="skill-icon" style="--accent: #F7DF1E">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h4>Python</h4>
+                    <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+                </div>
+                <div class="skill-card" data-animate="fade-up" data-delay="250">
+                    <div class="skill-icon" style="--accent: #FF6B6B">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <h4>Figma</h4>
+                    <div class="skill-bar"><div class="skill-progress" data-width="82"></div></div>
+                </div>
+                <div class="skill-card" data-animate="fade-up" data-delay="300">
+                    <div class="skill-icon" style="--accent: #4DB33D">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>MongoDB</h4>
+                    <div class="skill-bar"><div class="skill-progress" data-width="78"></div></div>
+                </div>
+                <div class="skill-card" data-animate="fade-up" data-delay="350">
+                    <div class="skill-icon" style="--accent: #E44D26">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h4>Git</h4>
+                    <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+            </div>
+            <div class="project-filters" data-animate="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web" data-animate="fade-up" data-delay="0">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-featured online store with product management, cart functionality, and secure payment integration.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web" data-animate="fade-up" data-delay="100">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Next.js</span>
+                            <span>TypeScript</span>
+                            <span>Prisma</span>
+                        </div>
+                        <h3>Task Management App</h3>
+                        <p>Collaborative project management tool with real-time updates, drag-and-drop, and team features.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile" data-animate="fade-up" data-delay="200">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--bg: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                        </div>
+                        <h3>Fitness Tracker</h3>
+                        <p>Mobile app for tracking workouts, nutrition, and health metrics with beautiful charts and insights.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="design" data-animate="fade-up" data-delay="300">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--bg: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Figma</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <h3>Brand Identity System</h3>
+                        <p>Complete design system with components, typography, color palette, and comprehensive style guidelines.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web" data-animate="fade-up" data-delay="100">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--bg: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>D3.js</span>
+                        </div>
+                        <h3>Analytics Dashboard</h3>
+                        <p>Data visualization dashboard with interactive charts, real-time data, and customizable widgets.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile" data-animate="fade-up" data-delay="200">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--bg: linear-gradient(135deg, #fa709a 0%, #fee140 100%)">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Firebase</span>
+                        </div>
+                        <h3>Food Delivery App</h3>
+                        <p>Mobile food ordering app with restaurant listings, real-time order tracking, and in-app payments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What people <span class="text-gradient">say</span></h2>
+            </div>
+            <div class="testimonial-slider" data-animate="fade-up">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>"Exceptional work! The website exceeded our expectations. Clean code, stunning design, and outstanding attention to detail."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div>
+                                <h5>Sarah Johnson</h5>
+                                <span>CEO, TechStart</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>"Working with Govindu was a fantastic experience. Delivered the project on time with impeccable quality and great communication throughout."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div>
+                                <h5>Michael Chen</h5>
+                                <span>Product Manager, InnoLab</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>"A true professional. Transformed our vision into a beautiful, functional product. Highly recommend for anyone needing top-tier development."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div>
+                                <h5>Emily Roberts</h5>
+                                <span>Founder, DesignCo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="test-nav-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="test-dots" id="testDots"></div>
+                    <button class="test-nav-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's work <span class="text-gradient">together</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-animate="fade-right">
+                    <h3>Let's talk about your project</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:govindudandeniya@gmail.com">govindudandeniya@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+94771234567">+94 77 123 4567</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span>Colombo, Sri Lanka</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" data-animate="fade-left" id="contactForm">
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                            <span class="input-border"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                            <span class="input-border"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input type="text" id="subject" required placeholder=" ">
+                            <label for="subject">Subject</label>
+                            <span class="input-border"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <textarea id="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="input-border"></span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,50 C360,100 720,0 1080,50 C1260,75 1380,60 1440,50 L1440,100 L0,100 Z" fill="currentColor"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <span class="logo-bracket">&lt;</span>G<span class="logo-dot">.</span>Dev<span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p>Building digital experiences that inspire and delight.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Govindu. All rights reserved.</p>
+                <p>Designed & built with <span class="heart">&hearts;</span> by Govindu</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
