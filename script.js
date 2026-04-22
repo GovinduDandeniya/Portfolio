@@ -369,14 +369,6 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 // ===== Fade In Up Keyframe (used by filters) =====
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-`;
-document.head.appendChild(style);
 
 // ===== Initialize Particle Canvas =====
 document.addEventListener('DOMContentLoaded', () => {

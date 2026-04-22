@@ -305,7 +305,7 @@ img { max-width: 100%; display: block; }
     height: 300px;
     background: radial-gradient(circle, rgba(0, 212, 170, 0.3), transparent);
     top: 40%;
-    left: 50%;
+    left: 45%;
     animation-delay: -14s;
 }
 
@@ -1600,3 +1600,108 @@ img { max-width: 100%; display: block; }
         padding: 24px;
     }
 }
+
+/* ===== Portfolio Visual Enhancements ===== */
+
+/* Animated gradient on hero name */
+.gradient-name {
+    background: linear-gradient(135deg, #6c63ff 0%, #ff6b9d 40%, #00d4aa 70%, #6c63ff 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientFlow 4s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Section title decorative underline */
+.section-header .section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+    margin: 14px auto 0;
+}
+
+/* Project card gradient top border reveal on hover */
+.project-card {
+    position: relative;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    z-index: 2;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+/* Featured project card */
+.featured-project {
+    border-color: rgba(108, 99, 255, 0.35);
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.08), rgba(255, 107, 157, 0.04));
+}
+
+.featured-project::before {
+    opacity: 0.6;
+}
+
+.featured-project:hover::before {
+    opacity: 1;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 10;
+    padding: 4px 12px;
+    background: var(--gradient-primary);
+    border-radius: 50px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.4);
+    pointer-events: none;
+}
+
+/* Skill card shimmer effect on hover */
+.skill-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+    transition: left 0.7s ease;
+    pointer-events: none;
+}
+
+.skill-card:hover::after {
+    left: 100%;
+}
+
